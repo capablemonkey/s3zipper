@@ -6,34 +6,34 @@ Microservice that Servers Streaming Zip file from S3 Securely
 
 ## Getting started
 
-1. Clone this repo.
+Clone this repo.
 
 ```
 git clone https://github.com/Teamwork/s3zipper.git
 cd s3zipper
 ```
 
-2. Install dependencies
+Install dependencies
 
 ```
 go get
 go install
 ```
 
-3. Add your S3 and Redis credentials to `conf.json`.
+Add your S3 and Redis credentials to `conf.json`.
 
 ```
 cp sample_conf.json conf.json
 nano conf.json
 ```
 
-4. Start the server
+Start the server
 
 ```
 go run s3zipper.go
 ```
 
-5. Add a new zip file to Redis.  A zip file is represented as a JSON array containing file objects.  File objects have the following structure:
+Add a new zip file to Redis.  A zip file is represented as a JSON array containing file objects.  File objects have the following structure:
 
 ```json
 {
@@ -50,4 +50,4 @@ To create a zip file containing just the above file, you'd create a new key of t
 OK
 ```
 
-6. Now, you can visit `http://localhost:8000/?ref=testsession123` and begin streaming the zip file!
+Now, you can visit `http://localhost:8000/?ref=testsession123` and begin streaming the zip file!
